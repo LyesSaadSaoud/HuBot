@@ -1,48 +1,125 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study
+
+Welcome to the official repository for **HuBot**, a biomimetic mobile robot designed for non-invasive wildlife monitoring and ecological research. This repository hosts the dataset, methodologies, and results associated with the HuBot project.
+
+---
+
+## Overview
+
+The **Houbara bustard** is a critically endangered bird species that poses challenges for traditional research due to its elusive nature and sensitivity to human disturbances. To overcome these limitations, we introduce **HuBot**, a biomimetic robot designed to seamlessly integrate into the Houbara's natural habitat. Leveraging cutting-edge object detection algorithms and robust hardware, HuBot enables unprecedented insights into the Houbara's movement patterns, social interactions, and habitat use.
+
+---
+
+## Dataset
+
+### **Key Details:**
+- **Size:** 5,000 images annotated for object detection.
+- **Sources:** In-house footage, online repositories, and globally deployed camera traps.
+- **Dataset Split:**
+  - Training: 4,000 images.
+  - Validation: 500 images.
+  - Testing: 500 images.
+- **Annotations:** Bounding boxes localizing Houbara bustards in various environments.
+
+### **Features:**
+- **Bias Mitigation:** Diverse lighting, backgrounds, and challenging scenarios.
+- **Data Augmentation:** Horizontal flips, cropping, blurring, and noise addition.
+- **Future Expansion:** Scaling to 50,000 images covering rare behaviors and subspecies.
+
+The dataset supports the training and evaluation of object detection algorithms for non-invasive ecological monitoring.
+
+---
+
+## Experimental Setup and Methodology
+
+### **Hardware**
+- **Platform:** NVIDIA Jetson AGX Xavier
+- **Specifications:**
+  - NVIDIA Volta™ GPU with 10 TeraFLOPS
+  - 48 GB LPDDR4 memory
+- **Environment:** Ubuntu 18.04 LTS, PyTorch 2.2.1 with CUDA 11.8, OpenCV-Python
+
+### **Software Pipeline**
+- **Data Management:** Real-time wireless transmission, preprocessing, and storage on a secure local server.
+- **Algorithms:**
+  - Object Detection: YOLOv9 for precise localization.
+  - Real-Time Performance: Optimized for embedded applications.
+- **Testing Environment:**
+  - Locations: Desert landscapes, coastal regions, and semi-urban environments.
+  - Climate: Extreme temperatures (10°C to 45°C) and high humidity (up to 95%).
+
+---
+
+## Key Features and Contributions
+
+1. **Biomimetic Design:** Life-like appearance and movement minimize disturbance to wildlife.
+2. **Advanced Algorithms:**
+   - Real-time detection with YOLOv9.
+   - Enhanced environmental analysis with deep learning models.
+3. **Environmental Resilience:**
+   - Thermal insulation for extreme temperatures.
+   - Moisture-resistant materials for high humidity and precipitation.
+4. **Non-Invasive Observation:**
+   - Demonstrated ability to approach Houbara bustards without altering their behavior.
+
+---
+
+## Results
+
+### **Object Detection Performance**
+- **Model:** YOLOv9
+- **Metrics:**
+  - mAP50: 98.56%
+  - Precision: 98.33%
+  - Recall: 94.55%
+  - F1-Score: 96.40%
+  - Inference Time: 0.0568 seconds
+
+### **Environmental Validation**
+- **Temperature:** Operated stably in temperatures ranging from 10°C to 45°C.
+- **Humidity:** Maintained functionality under 95% humidity.
+- **Live Trials:** Successfully interacted with Houbara bustards in controlled and natural environments.
+
+---
+
+## Future Work
+
+1. Expanding the dataset to include:
+   - Rare Houbara behaviors.
+   - Multiple subspecies.
+   - Geographically diverse locations.
+2. Enhancing HuBot's hardware for:
+   - Improved waterproofing.
+   - Extended battery life.
+3. Refining algorithms to further reduce detection and localization errors.
+
+---
+
+## Repository Structure
+
+/static/ # Contains media assets such as images and videos /images/ # Images used in the dataset and visualizations /videos/ # Videos showcasing HuBot's performance index.html # Main webpage for the project README.md # This file
 
 
-Example project pages built using this template are:
-- https://vision.huji.ac.il/spectral_detuning/
-- https://vision.huji.ac.il/podd/
-- https://dreamix-video-editing.github.io
-- https://vision.huji.ac.il/conffusion/
-- https://vision.huji.ac.il/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad/
-- https://vision.huji.ac.il/deepsim/
+---
+
+## Citation
+
+If you use HuBot or its dataset, please cite our work:
+
+Lyes Saad Saoud, Loïc Lesobre, Enrico Sorato, Saud Al Qaydi, Yves Hingrat, Lakmal Seneviratne, Irfan Hussain. "HuBot: A Biomimicking Mobile Robot for Non-Disruptive Bird Behavior Study and Ecological Conservation."
 
 
+---
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## Contact
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+For questions or collaboration inquiries, please contact:
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+- **Lyes Saad Saoud** (Primary Contributor): `lyes.saoud@kustar.ac.ae`
+- **Irfan Hussain** (Corresponding Author): `irfan.hussain@ku.ac.ae`
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+---
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+### License
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+This repository is shared under the **CC BY 4.0 License**, allowing reuse for non-commercial purposes with proper attribution.
